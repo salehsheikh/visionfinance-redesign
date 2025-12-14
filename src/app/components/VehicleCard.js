@@ -8,6 +8,7 @@ import {
   Settings2Icon,
   CableCar,
   DoorOpen,
+  Camera,
 } from 'lucide-react';
 
 export default function VehicleCard({ vehicle }) {
@@ -44,11 +45,12 @@ export default function VehicleCard({ vehicle }) {
                  33vw"
         />
 
-        <div className="absolute top-3 left-3">
-          <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-semibold">
-            {vehicle.year} • {vehicle.regDate}
-          </span>
-        </div>
+       <div className="absolute top-3 left-3">
+  <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-gray-800 backdrop-blur-sm text-white text-xs font-semibold">
+    <Camera className="w-4 h-4" />
+    5
+  </span>
+</div>
 
         <div className="absolute bottom-3 right-3">
           <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold">
