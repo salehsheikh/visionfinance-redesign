@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 249, 250;
+  --background-end-rgb: 255, 255, 255;
+  --pak-blue: #007bff;
+  --pak-blue-dark: #0056b3;
+  --pak-blue-light: #e7f1ff;
+  --pak-gray-50: #f8f9fa;
+  --pak-gray-100: #e9ecef;
+  --pak-gray-200: #dee2e6;
+  --pak-gray-300: #ced4da;
+  --pak-gray-400: #adb5bd;
+  --pak-gray-700: #495057;
+  --pak-gray-800: #343a40;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pak-gray-100);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pak-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pak-blue-dark);
+}
+
+/* Custom utility classes */
+@layer components {
+  .card-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-shadow-hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .transition-all-300 {
+    transition: all 0.3s ease;
+  }
+  
+  .transition-transform-500 {
+    transition: transform 0.5s ease;
+  }
+}
